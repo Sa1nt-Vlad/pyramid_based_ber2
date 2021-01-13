@@ -1,0 +1,3 @@
+[run]
+source = pyramid_based_ber
+omit = pyramid_based_ber/test*

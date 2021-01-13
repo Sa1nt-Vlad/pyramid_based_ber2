@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>БЕР — Построй свой бургер!</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="../static/css/index.css">
+</head>
+<body>
+	<header>
+		<div class="header-top">
+			<ul>
+				<li id="logo-li"><a href="index.html"><img src="../static/img/logo.png" alt="БЕР" class="logo" width="100px"></a></li>
+				<li><a href="#">Создать</a></li>
+				<li><a href="#">О нас</a></li>
+				<li><a href="#">Донат</a></li>
+			</ul>
+		</div>
+		<div class="header-bottom">
+			<h1>Добро пожаловать!</h1>
+			<a href="#order">Создать и заказать</a>
+		</div>
+	</header>
+	<form action="/order" method="POST">
+		<div class="content">
+			<div class="decoration dec-1"><img src="../static/img/decoration-1.png" width="70%"></div>
+			<a name="order"></a>
+			<h2>Создание бургера</h2>
+			<div class="steps step-1">
+				<h2>Шаг 1</h2>
+				<p>Выберите булочку</p>
+				<div class="products product-1">
+					<input type="radio" name="bread" id="bread-1-field" value="sesame">
+					<label for="bread-1-field"><img src="../static/img/bread-sesame.png" width="100px"><p>С кунжутом</p></label>
+				</div>
+				<div class="products product-2">
+					<input type="radio" name="bread" id="bread-2-field" value="no_sesame">
+					<label for="bread-2-field"><img src="../static/img/bread-no-sesame.png" width="100px"><p>Без кунжута</p></label>
+				</div>
+			</div>
+			<div class="steps step-2">
+				<h2>Шаг 2</h2>
+				<p>Выберите мясо</p>
+				<div class="products product-1">
+					<input type="radio" name="meat" id="meat-1-field" value="chicken">
+					<label for="meat-1-field"><img src="../static/img/meat-chicken.png" width="100px"><p>Курица</p></label>
+				</div>
+				<div class="products product-2">
+					<input type="radio" name="meat" id="meat-2-field" value="beef">
+					<label for="meat-2-field"><img src="../static/img/meat-beef.png" width="100px"><p>Говядина</p></label>
+				</div>
+			</div>
+			<div class="steps step-3">
+				<h2>Шаг 3</h2>
+				<p>Выберите ингредиенты</p>
+				<div class="products product-1">
+					<input type="checkbox" name="stuffing" id="stuffing-1-field">
+					<label for="stuffing-1-field"><img src="../static/img/ingr-cheese.png" width="100px" value="cheese"><p>Сыр</p></label>
+				</div>
+				<div class="products product-2">
+					<input type="checkbox" name="stuffing" id="stuffing-2-field" value="salad">
+					<label for="stuffing-2-field"><img src="../static/img/ingr-salad.png" width="100px"><p>Салат</p></label>
+				</div>
+				<div class="products product-3">
+					<input type="checkbox" name="stuffing" id="stuffing-3-field" value="cucumber">
+					<label for="stuffing-3-field"><img src="../static/img/ingr-cucumber.png" width="100px"><p>Маринованные огурцы</p></label>
+				</div>
+				<div class="products product-4">
+					<input type="checkbox" name="stuffing" id="stuffing-4-field" value="onion">
+					<label for="stuffing-4-field"><img src="../static/img/ingr-onion.png" width="100px"><p>Красный лук</p></label>
+				</div>
+				<div class="products product-5">
+					<input type="checkbox" name="stuffing" id="stuffing-5-field" value="tomato">
+					<label for="stuffing-5-field"><img src="../static/img/ingr-tomato.png" width="100px"><p>Помидор</p></label>
+				</div>
+				<div class="products product-6">
+					<input type="checkbox" name="stuffing" id="stuffing-6-field" value="bacon">
+					<label for="stuffing-6-field"><img src="../static/img/ingr-bacon.png" width="100px"><p>Бекон</p></label>
+				</div>
+				<div class="products product-7">
+					<input type="checkbox" name="stuffing" id="stuffing-7-field" value="egg">
+					<label for="stuffing-7-field"><img src="../static/img/ingr-egg.png" width="100px"><p>Жареное яйцо</p></label>
+				</div>
+				<div class="products product-8">
+					<input type="checkbox" name="stuffing" id="stuffing-8-field" value="crisps">
+					<label for="stuffing-8-field"><img src="../static/img/ingr-chips.png" width="100px"><p>Солёные чипсы</p></label>
+				</div>
+			</div>
+			<div class="steps step-4">
+				<h2>Шаг 4</h2>
+				<p>Выберите соус</p>
+				<div class="products product-1">
+					<input type="checkbox" name="sauce" id="sauce-1-field" value="barbecue">
+					<label for="sauce-1-field"><img src="../static/img/sauce-bbq.png" width="100px"><p>Барбекю</p></label>
+				</div>
+				<div class="products product-2">
+					<input type="checkbox" name="sauce" id="sauce-2-field" value="mustard">
+					<label for="sauce-2-field"><img src="../static/img/sauce-mustard.png" width="100px"><p>Горчица</p></label>
+				</div>
+				<div class="products product-3">
+					<input type="checkbox" name="sauce" id="sauce-3-field" value="garlic">
+					<label for="sauce-3-field"><img src="../static/img/sauce-sour.png" width="100px"><p>Сметанно-чесночный</p></label>
+				</div>
+				<div class="products product-4">
+					<input type="checkbox" name="sauce" id="sauce-4-field" value="ketchup">
+					<label for="sauce-4-field"><img src="../static/img/sauce-ketchup.png" width="100px"><p>Кетчуп</p></label>
+				</div>
+			</div>
+			<div class="decoration dec-2"><img src="../static/img/decoration-2.png" width="70%"></div>
+			<h2>Оформление заказа</h2>
+			<div class="delivery-info">
+				<p><input type="text" name="name" placeholder="Введите Ваше имя"></p>
+				<p><input type="text" name="phone_number" placeholder="Введите Ваш номер телефона"></p>
+				<p><input type="text" name="address" placeholder="Введите адрес доставки" id="address"></p>
+				<p><input type="submit" value="Оформить заказ"></p>
+			</div>
+		</div>
+	</form>
+	<footer>
+		<div class="wrapper">
+			<div class="social-media">
+				<p>Наши соцсети</p>
+				<div class="icon-wrapper">
+					<a href="https://vk.com/" class="icon vk"></a>
+					<a href="https://www.whatsapp.com/" class="icon ws"></a>
+					<a href="https://gmail.com/" class="icon gl"></a>
+					<a href="https://www.instagram.com/" class="icon is"></a>
+				</div>
+			</div>
+			<div class="copyright">
+				БЕР — Собери свой бургер! © 2021
+			</div>
+		</div>
+	</footer>
+</body>
+</html>

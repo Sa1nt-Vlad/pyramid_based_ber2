@@ -1,0 +1,285 @@
+@import 'settings.css';
+
+* {
+	font-family: 'Akrobat Light';
+}
+
+body {
+	min-height: 500px; 
+	background-color: white;
+	width: 100%;
+}
+
+header {
+	height: 926px;
+	margin-bottom: 4%;
+}
+
+.header-top {
+	height: 5.509%;
+	padding-left: 113px;
+	background: url("../img/black_line.jpg") center no-repeat;
+}
+
+.header-top ul {
+	height: 100%;
+}
+
+.header-top li {
+	display: inline-block;
+	margin-right: 52px;
+	vertical-align: middle;
+}
+
+.header-top li:first-child {
+	margin-right: 51%;
+	margin-top: 7px;
+}
+
+.header-top li > a {
+	font-size: 20px;
+	color: white;
+	transition: color 0.3s ease;
+}
+
+.header-top li > a:hover {
+	color: #b42953;
+}
+
+.header-bottom {
+	height: 94.491%;
+	background: url("../img/burgers.jpg") center no-repeat;
+	background-size: cover;
+	padding-top: 415px;
+	text-align: center;
+}
+
+.header-bottom h1 {
+	font-size: 52px;
+	color: white;
+	margin-bottom: 50px;
+}
+
+.header-bottom a {
+	display: inline-block;
+	width: 225px;
+	height: 55px;
+	border: 1px solid #0a1b21;
+	opacity: 0.8;
+	background-color: #033b4d;
+	color: white;
+	letter-spacing: 2px;
+	font-size: 20px;
+	padding-top: 14px;
+	border-radius: 15px;
+	transition: background-color 0.3s ease;
+}
+
+.header-bottom a:hover {
+	background-color: #246c0b;
+}
+
+.content {
+	width: 51.61%;
+	margin: 0 auto;
+}
+
+.content .decoration {
+	text-align: center;
+	margin-bottom: 75px;
+}
+
+.content > h2 {
+	text-align: center;
+	font-size: 36px;
+	margin-bottom: 40px;
+}
+
+.content .steps {
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+.content .steps h2 {
+	font-size: 30px
+}
+
+.content .steps p {
+	font-size: 24px;
+	margin-bottom: 30px;
+}
+
+.steps input[type="radio"],
+.steps input[type="checkbox"] {
+	display: none;
+}
+
+.steps input[type="checkbox"]:checked + label img,
+.steps input[type="radio"]:checked + label img {
+	opacity: 1;
+}
+
+.steps img {
+	transition: all 0.3s ease;
+	opacity: 0.4;
+}
+
+.steps img:hover {
+	opacity: 1
+}
+
+.products {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	width: 200px;
+}
+
+.content .dec-2 {
+	margin-top: 100px;
+	margin-bottom: 100px;
+}
+
+.content .delivery-info {
+	width: 37%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.content .delivery-info input[type="text"] {
+	width: 100%;
+	height: 51px;
+	font-size: 20px;
+	padding-left: 25px;
+	margin-bottom: 15px;
+	border: 1px solid black;
+	border-radius: 2px;
+}
+
+.content #address {
+	margin-bottom: 60px;
+}
+
+.content .delivery-info input[type="submit"] {
+	font-size: 20px;
+	width: 70%;
+	height: 60px;
+	background-color: #42a053;
+	border: 1px solid black;
+	color: white;
+	margin-bottom: 150px;
+	transition: background-color 0.3s ease;
+}
+
+.content .delivery-info input[type="submit"]:hover {
+	background-color: #4bb65e;
+}
+
+footer {
+	width: 100%;;
+	height: 150px;
+	background-color: #000;
+	padding: 50px 100px 30px 100px;
+}
+
+footer .wrapper {
+	color: white;
+	display: flex;
+	justify-content: space-between;
+}
+
+footer .social-media p {
+	font-size: 22px;
+	margin-bottom: 2px;
+}
+
+footer .icon {
+	width: 38px;
+	height: 38px;
+	background: url("../img/social-media.png") no-repeat;
+	background-size: cover;
+	display: inline-block;
+}
+
+footer .ws {
+	background-position: -38px 0px;
+}
+
+footer .gl {
+	background-position: -79px 0px;
+}
+
+footer .is {
+	background-position: -117px 0px;
+}
+
+footer .copyright {
+	align-self: flex-end;
+	padding-top: 5px;
+	font-size: 18px;
+	letter-spacing: 1.5px;
+}
+
+@media screen and (max-width: 1570px) {
+	.content .delivery-info input[type="text"] {
+		height: 41px;
+		font-size: 17px;
+	}
+	.content .delivery-info input[type="submit"] {
+		font-size: 18px;
+		height: 55px;
+	}
+	.content > h2 {
+		font-size: 32px;
+	}
+	.products {
+		width: 160px;
+	}
+	.steps img {
+		width: 80px;
+	}
+	.content .steps p {
+		font-size: 22px;
+	}
+	.content .steps h2 {
+		font-size: 28px
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.header-top li:first-child {
+		margin-right: 41%;
+	}
+	.content .delivery-info input[type="text"] {
+		height: 41px;
+		font-size: 14px;
+		padding-left: 18px;
+	}
+	.content .delivery-info input[type="submit"] {
+		font-size: 16px;
+		height: 40px;
+	}
+	.products {
+		width: 140px;
+	}
+	.steps img {
+		width: 70px;
+	}
+	.content .steps p {
+		font-size: 20px;
+	}
+	.content .steps h2 {
+		font-size: 26px
+	}
+}
+
+@media screen and (max-width: 860px) {
+	.header-top li:first-child {
+		margin-right: 31%;
+	}
+	.header-top {
+		height: 5.509%;
+		padding-left: 50px;
+		background: url("../img/black_line.jpg") center no-repeat;
+	}
+}

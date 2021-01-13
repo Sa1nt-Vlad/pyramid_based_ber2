@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>БЕР — Построй свой бургер!</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="../static/css/index.css">
+</head>
+<body>
+	<header>
+		<div class="header-top">
+			<ul>
+				<li id="logo-li"><a href="index.html"><img src="../static/img/logo.png" alt="БЕР" class="logo" width="100px"></a></li>
+				<li><a href="#">Создать</a></li>
+				<li><a href="#">О нас</a></li>
+				<li><a href="#">Донат</a></li>
+			</ul>
+		</div>
+		<div class="header-bottom">
+			<h1>Добро пожаловать!</h1>
+			<a href="#order">Создать и заказать</a>
+		</div>
+	</header>
+
+    {% block content %}
+        <p>No content</p>
+    {% endblock content %}
+
+	<footer>
+		<div class="wrapper">
+			<div class="social-media">
+				<p>Наши соцсети</p>
+				<div class="icon-wrapper">
+					<a href="https://vk.com/" class="icon vk"></a>
+					<a href="https://www.whatsapp.com/" class="icon ws"></a>
+					<a href="https://gmail.com/" class="icon gl"></a>
+					<a href="https://www.instagram.com/" class="icon is"></a>
+				</div>
+			</div>
+			<div class="copyright">
+				БЕР — Собери свой бургер! © 2021
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
