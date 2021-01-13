@@ -2,14 +2,16 @@
 
 {% block content %}
     <h1>Информация о заказе</h1>
-    <p>Номер заказа: 24124</p>
+    <p>Номер заказа: {{ order_info.order_id }}</p>
+    <p>Дата совершения заказа: {{ order_info.creation_date }}</p>
     <p>Ваше имя: {{order_info.name}}</p>
     <p>Ваш номер: {{order_info.phone_number}}</p>
     <p>Ваш адрес: {{order_info.address}}</p>
-
+    <br>
     <h2>Собранный бургер:</h2>
     <p>Булочка: {{order_info.burger_config.bun}}</p>
     <p>Котлета: {{order_info.burger_config.cutlet}}</p>
     <p>Начинка: {{order_info.burger_config.stuffings}}</p>
     <p>Соусы: {{order_info.burger_config.sauces}}</p>
+    <br>
 {% endblock content %}

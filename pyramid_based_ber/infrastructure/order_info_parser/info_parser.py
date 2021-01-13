@@ -1,13 +1,19 @@
+from datetime import datetime
+
 from pyramid_based_ber.infrastructure.enums_parser import ingredients_parser
 from pyramid_based_ber.models.burger import Burger
 from pyramid_based_ber.models.order_dto import OrderDto
 
 
-def parse_order_info(params) -> OrderDto:
+def parse_order_info(order_id: int, params) -> OrderDto:
     burger = parse_burger_info(params)
-    return OrderDto(remove_unnecessary_whitespaces(params['name']),
-                    remove_unnecessary_whitespaces(params['phone_number']),
-                    remove_unnecessary_whitespaces(params['address']), burger)
+    return OrderDto(
+        order_id=order_id,
+        creation_date=datetime.now(tz=None),
+        name=remove_unnecessary_whitespaces(params['name']),
+        phone_number=remove_unnecessary_whitespaces(params['phone_number']),
+        address=remove_unnecessary_whitespaces(params['address']),
+        burger_config=burger)
 
 
 def parse_burger_info(params) -> Burger:
