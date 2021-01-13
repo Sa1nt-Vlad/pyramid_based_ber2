@@ -11,56 +11,60 @@ body {
 }
 
 header {
-	height: 926px;
-	margin-bottom: 4%;
+	min-height: 52px;
 }
 
-.header-top {
-	height: 5.509%;
+header .wrapper {
+	min-height: 52px;
 	padding-left: 113px;
 	background: url("../img/black_line.jpg") center no-repeat;
 }
 
-.header-top ul {
+header .wrapper ul {
 	height: 100%;
 }
 
-.header-top li {
+header .wrapper li {
 	display: inline-block;
 	margin-right: 52px;
 	vertical-align: middle;
 }
 
-.header-top li:first-child {
+header .wrapper li:first-child {
 	margin-right: 51%;
 	margin-top: 7px;
 }
 
-.header-top li > a {
+header .wrapper li > a {
 	font-size: 20px;
 	color: white;
 	transition: color 0.3s ease;
 }
 
-.header-top li > a:hover {
+header .wrapper li > a:hover {
 	color: #b42953;
 }
 
-.header-bottom {
-	height: 94.491%;
+.banner {
+	min-height: 874px;
+	margin-bottom: 4%;
+}
+
+.banner .wrapper {
+	min-height: 874px;
 	background: url("../img/burgers.jpg") center no-repeat;
 	background-size: cover;
 	padding-top: 415px;
 	text-align: center;
 }
 
-.header-bottom h1 {
+.banner .wrapper h1 {
 	font-size: 52px;
 	color: white;
 	margin-bottom: 50px;
 }
 
-.header-bottom a {
+.banner .wrapper a {
 	display: inline-block;
 	width: 225px;
 	height: 55px;
@@ -75,7 +79,7 @@ header {
 	transition: background-color 0.3s ease;
 }
 
-.header-bottom a:hover {
+.banner .wrapper a:hover {
 	background-color: #246c0b;
 }
 
@@ -247,7 +251,7 @@ footer .copyright {
 }
 
 @media screen and (max-width: 1200px) {
-	.header-top li:first-child {
+	header .wrapper li:first-child {
 		margin-right: 41%;
 	}
 	.content .delivery-info input[type="text"] {
@@ -274,10 +278,10 @@ footer .copyright {
 }
 
 @media screen and (max-width: 860px) {
-	.header-top li:first-child {
+	header .wrapper li:first-child {
 		margin-right: 31%;
 	}
-	.header-top {
+	header .wrapper {
 		height: 5.509%;
 		padding-left: 50px;
 		background: url("../img/black_line.jpg") center no-repeat;
