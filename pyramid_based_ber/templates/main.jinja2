@@ -1,7 +1,13 @@
 {% extends "index.jinja2" %}
 
 {% block content %}
-<form action="/order" method="POST">
+    <div class="banner">
+        <div class="wrapper">
+			<h1>Добро пожаловать!</h1>
+			<a href="#order">Создать и заказать</a>
+		</div>
+	</div>
+    <form action="/order" method="POST">
 		<div class="content">
 			<div class="decoration dec-1"><img src="../static/img/decoration-1.png" width="70%"></div>
 			<a name="order"></a>
