@@ -5,7 +5,7 @@ from sqlalchemy import (
     Text,
 )
 
-from .meta import Base
+from pyramid_based_ber.models.meta import Base
 
 
 class MyModel(Base):

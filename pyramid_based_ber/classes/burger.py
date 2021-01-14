@@ -1,5 +1,5 @@
-from pyramid_based_ber.models.burger_config.bun import Bun
-from pyramid_based_ber.models.burger_config.cutlet import Cutlet
+from pyramid_based_ber.classes.burger_config.bun import Bun
+from pyramid_based_ber.classes.burger_config.cutlet import Cutlet
 
 
 class Burger(object):

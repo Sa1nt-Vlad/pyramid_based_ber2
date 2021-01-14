@@ -1,8 +1,8 @@
 from datetime import datetime
 
 from pyramid_based_ber.infrastructure.enums_parser import ingredients_parser
-from pyramid_based_ber.models.burger import Burger
-from pyramid_based_ber.models.order_dto import OrderDto
+from pyramid_based_ber.classes.burger import Burger
+from pyramid_based_ber.classes.order_dto import OrderDto
 
 
 def parse_order_info(order_id: int, params) -> OrderDto:
