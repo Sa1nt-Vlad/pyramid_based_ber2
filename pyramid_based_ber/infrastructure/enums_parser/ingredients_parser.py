@@ -1,7 +1,7 @@
-from pyramid_based_ber.models.burger_config.bun import Bun
-from pyramid_based_ber.models.burger_config.cutlet import Cutlet
-from pyramid_based_ber.models.burger_config.sauce import Sauce
-from pyramid_based_ber.models.burger_config.stuffing import Stuffing
+from pyramid_based_ber.classes.burger_config.bun import Bun
+from pyramid_based_ber.classes.burger_config.cutlet import Cutlet
+from pyramid_based_ber.classes.burger_config.sauce import Sauce
+from pyramid_based_ber.classes.burger_config.stuffing import Stuffing
 
 bun_types = {'sesame': Bun.sesame, 'no_sesame': Bun.no_sesame}
 cutlet_types = {'chicken': Cutlet.chicken, 'beef': Cutlet.beef}

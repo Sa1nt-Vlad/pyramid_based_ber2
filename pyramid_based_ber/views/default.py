@@ -1,9 +1,11 @@
 from pyramid.view import view_config
 from pyramid.response import Response
+from random import randint
 
 from sqlalchemy.exc import DBAPIError
 
 from .. import models
+import transaction
 
 
 @view_config(route_name='home', renderer='../templates/main.jinja2')

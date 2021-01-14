@@ -1,6 +1,6 @@
 import re
 
-from pyramid_based_ber.models.order_dto import OrderDto
+from pyramid_based_ber.classes.order_dto import OrderDto
 
 
 def validate(order_info: OrderDto) -> bool:

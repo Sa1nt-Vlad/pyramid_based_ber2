@@ -8,7 +8,7 @@ from pyramid_based_ber.infrastructure.validation.info_validator import validate
 def make_order(request):
     order_info = parse_order_info(1, request.params)
     # if validate(order_info):
-    register_order(order_info)
+    register_order(request, order_info)
     return {'order_info': order_info}
     # else:
     # return {'': 'Incorrect data'}

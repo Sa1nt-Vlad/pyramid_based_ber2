@@ -1,6 +1,6 @@
 import datetime
 
-from pyramid_based_ber.models.burger import Burger
+from pyramid_based_ber.classes.burger import Burger
 
 
 class OrderDto(object):
