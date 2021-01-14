@@ -14,6 +14,8 @@ class BurgerDB(Base):
     id = Column(Integer, primary_key=True)
     bun = Column(Text)
     cutlet = Column(Text)
+    sauces = Column(Text)
+    stuffings = Column(Text)
 
 
 Index('my_index', BurgerDB.id, unique=True, mysql_length=255)

@@ -6,7 +6,8 @@ import zope.sqlalchemy
 # import or define all classes here to ensure they are attached to the
 # Base.metadata prior to any initialization routines
 from .mymodel import MyModel
-from .sauce_db import SauceDB  # flake8: noqa
+from .order_db import OrderDB
+from .burger_db import BurgerDB  # flake8: noqa
 
 # run configure_mappers after defining all of the classes to ensure
 # all relationships can be setup

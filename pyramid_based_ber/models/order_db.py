@@ -18,7 +18,7 @@ class OrderDB(Base):
     phone = Column(Text)
     address = Column(Text)
     time = Column(Date)
-    burger = Column(Integer, ForeignKey('models.burger.id'))
+    burger = Column(Integer, ForeignKey('burgers.id'))
 
 
 Index('my_index', OrderDB.id, unique=True, mysql_length=255)
