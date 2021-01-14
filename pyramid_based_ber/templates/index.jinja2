@@ -5,6 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="../static/css/index.css">
+	{% block css %}{% endblock css %}
 </head>
 <body>
 	<header>
@@ -17,11 +18,8 @@
 			</ul>
 		</div>
 	</header>
-
-    {% block content %}
-        <p>No content</p>
-    {% endblock content %}
-
+  {% block content %}
+  {% endblock content %}
 	<footer>
 		<div class="wrapper">
 			<div class="social-media">
