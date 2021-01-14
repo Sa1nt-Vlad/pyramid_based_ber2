@@ -10,7 +10,7 @@ from pyramid_based_ber.models.meta import Base
 
 
 class StuffingDB(Base):
-    __tablename__ = 'burgers'
+    __tablename__ = 'stuffings'
     __table_args__ = {'extend_existing': True}
     id = Column(Integer, primary_key=True)
     type = Column(Text)

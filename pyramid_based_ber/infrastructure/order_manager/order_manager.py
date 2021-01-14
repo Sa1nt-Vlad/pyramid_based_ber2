@@ -1,3 +1,6 @@
-def register_order(order_info):
-    # запрос к бд на сохранение инфы
-    return
+from pyramid_based_ber import models
+import transaction
+
+
+def register_order(request, order_info):
+    transaction.commit()
