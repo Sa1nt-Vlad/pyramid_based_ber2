@@ -4,17 +4,23 @@
 
 {% block content %}
 <div class="order-info">
-    <h1>Информация о заказе</h1>
-    <p>Номер заказа: {{ order_info.order_id }}</p>
-    <p>Дата совершения заказа: {{ order_info.creation_date }}</p>
-    <p>Ваше имя: {{order_info.name}}</p>
-    <p>Ваш номер: {{order_info.phone_number}}</p>
-    <p>Ваш адрес: {{order_info.address}}</p>
-    <br>
-    <h2>Собранный бургер:</h2>
-    <p>Булочка: {{order_info.burger_config.bun}}</p>
-    <p>Котлета: {{order_info.burger_config.cutlet}}</p>
-    <p>Начинка: {{order_info.burger_config.stuffings}}</p>
-    <p>Соусы: {{order_info.burger_config.sauces}}</p>
+    <div class="top">
+        <h1>Заказ успешно сформирован</h1>
+        <img src="../static/img/checkmark.png" width="25px" height="25px">
+    </div>
+    <div class="bottom">
+        <h3>Информация о заказе</h3>
+        <p><span>Номер заказа:</span> {{ order_info.order_id }}</p>
+        <p><span>Дата совершения заказа:</span> {{ order_info.creation_date }}</p>
+        <p><span>Ваше имя:</span> {{order_info.name}}</p>
+        <p><span>Ваш номер:</span> {{order_info.phone_number}}</p>
+        <p><span>Ваш адрес:</span> {{order_info.address}}</p>
+        <br>
+        <h3>Собранный бургер:</h3>
+        <p><span>Булочка:</span> {{order_info.burger_config.bun}}</p>
+        <p><span>Котлета:</span> {{order_info.burger_config.cutlet}}</p>
+        <p><span>Начинка:</span> {{order_info.burger_config.stuffings}}</p>
+        <p><span>Соусы:</span> {{order_info.burger_config.sauces}}</p>
+    </div>
 </div>
 {% endblock content %}

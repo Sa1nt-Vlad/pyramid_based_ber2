@@ -1,5 +1,64 @@
-@import "index.css";
-
 .order-info {
 	width: 60%;
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 180px;
+}
+
+.order-info .top {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 20px;
+}
+
+.order-info .top img {
+	align-self: center;
+	margin-left: 10px;
+}
+
+.order-info .top h1 {
+	color: #07c00f;
+}
+
+.order-info .bottom {
+	font-size: 20px;
+	padding: 0 200px;
+}
+
+.order-info .bottom p {
+	margin-bottom: 1px;
+}
+
+.order-info span {
+	text-align: left;
+}
+
+@media screen and (max-width: 1570px) {
+	.order-info .bottom {
+		font-size: 19px;
+		padding: 0 150px;
+	}
+	.order-info .top h1 {
+		font-size: 30px
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.order-info .bottom {
+		font-size: 17px;
+		padding: 0 100px;
+	}
+	.order-info .top h1 {
+		font-size: 28px
+	}
+}
+
+@media screen and (max-width: 860px) {
+	.order-info .bottom {
+		font-size: 15px;
+		padding: 0 50px;
+	}
+	.order-info .top h1 {
+		font-size: 26px
+	}	
 }
