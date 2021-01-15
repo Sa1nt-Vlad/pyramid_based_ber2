@@ -2,13 +2,13 @@
 	width: 60%;
 	margin: 0 auto;
 	text-align: center;
-	margin-top: 180px;
+	margin-top: 100px;
 }
 
 .order-info .top {
 	display: flex;
 	justify-content: center;
-	margin-bottom: 20px;
+	margin-bottom: 40px;
 }
 
 .order-info .top img {
@@ -22,43 +22,60 @@
 
 .order-info .bottom {
 	font-size: 20px;
-	padding: 0 200px;
 }
 
-.order-info .bottom p {
-	margin-bottom: 1px;
-}
-
-.order-info span {
+.order-info .bottom h3 {
+	font-size: 20px;
+	width: 40%;
+	margin: 0 auto;
 	text-align: left;
+	margin-bottom: 2px;
 }
 
-@media screen and (max-width: 1570px) {
+.order-info table {
+	margin: 0 auto;
+	table-layout: fixed;
+	width: 40%;
+	word-wrap: break-word;
+}
+
+.order-info table td:first-child {
+	width: 40%;
+	padding-left: 5px;
+}
+
+@media screen and (max-width: 1650px) {
 	.order-info .bottom {
 		font-size: 19px;
-		padding: 0 150px;
 	}
 	.order-info .top h1 {
-		font-size: 30px
+		font-size: 30px;
+	}
+	.order-info table {
+		width: 48%;
 	}
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1350px) {
 	.order-info .bottom {
 		font-size: 17px;
-		padding: 0 100px;
 	}
 	.order-info .top h1 {
-		font-size: 28px
+		font-size: 28px;
+	}
+	.order-info table {
+		width: 55%;
 	}
 }
 
 @media screen and (max-width: 860px) {
 	.order-info .bottom {
 		font-size: 15px;
-		padding: 0 50px;
 	}
 	.order-info .top h1 {
-		font-size: 26px
+		font-size: 26px;
 	}	
+	.order-info table {
+		width: 60%;
+	}
 }
