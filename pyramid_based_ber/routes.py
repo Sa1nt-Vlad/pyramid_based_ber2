@@ -4,4 +4,5 @@ def includeme(config):
     config.add_route('order', '/order')
     config.add_route('list', '/list')
     config.add_route('burgers', '/burgers')
+    config.add_route('done', '/done')
 
