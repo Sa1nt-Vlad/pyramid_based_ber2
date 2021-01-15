@@ -20,7 +20,7 @@ def parse_order_info(params) -> OrderDto:
     burger = parse_burger_info(params)
     return OrderDto(
         creation_date=datetime.now(tz=None),
-        name= remove_unnecessary_whitespaces(params['name']),
+        name=remove_unnecessary_whitespaces(params['name']),
         phone_number=remove_unnecessary_whitespaces(params['phone_number']),
         address=remove_unnecessary_whitespaces(params['address']),
         burger_config=burger)
