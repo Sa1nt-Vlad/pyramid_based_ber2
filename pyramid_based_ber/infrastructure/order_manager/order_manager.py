@@ -21,3 +21,4 @@ def register_order(request, order_info):
     )
     request.dbsession.add(order)
     transaction.commit()
+    return id

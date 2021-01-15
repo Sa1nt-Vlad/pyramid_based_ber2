@@ -7,10 +7,9 @@ from pyramid_based_ber.classes.burger import Burger
 from pyramid_based_ber.classes.order_dto import OrderDto
 
 
-def parse_order_info(order_id: int, params) -> OrderDto:
+def parse_order_info(params) -> OrderDto:
     burger = parse_burger_info(params)
     return OrderDto(
-        order_id=order_id,
         creation_date=datetime.now(tz=None),
         name=remove_unnecessary_whitespaces(params['name']),
         phone_number=remove_unnecessary_whitespaces(params['phone_number']),
