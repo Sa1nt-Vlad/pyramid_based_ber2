@@ -11,8 +11,6 @@ def make_order(request):
     query = request.dbsession.query(models.OrderDB)
     order_infos = query.all()
     return {'order_infos': order_infos}
-    # else:
-    # return {'': 'Incorrect data'}
 
 
 @view_config(route_name='done', renderer='../templates/order_list.jinja2')
@@ -22,5 +20,3 @@ def done_order(request):
     order.done = 1
     transaction.commit()
     return {'order_infos': request.dbsession.query(models.OrderDB).all()}
-    # else:
-    # return {'': 'Incorrect data'}
