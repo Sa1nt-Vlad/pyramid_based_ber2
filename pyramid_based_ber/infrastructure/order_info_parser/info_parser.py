@@ -1,5 +1,7 @@
 from datetime import datetime
 
+from pyramid_based_ber.classes.burger_config.sauces import Sauces
+from pyramid_based_ber.classes.burger_config.stuffings import Stuffings
 from pyramid_based_ber.infrastructure.enums_parser import ingredients_parser
 from pyramid_based_ber.classes.burger import Burger
 from pyramid_based_ber.classes.order_dto import OrderDto
@@ -19,8 +21,8 @@ def parse_order_info(order_id: int, params) -> OrderDto:
 def parse_burger_info(params) -> Burger:
     bun = ingredients_parser.parse_bun(params['bread'])
     cutlet = ingredients_parser.parse_cutlet(params['meat'])
-    sauces = ingredients_parser.parse_sauces(params.getall('sauce'))
-    stuffings = ingredients_parser.parse_stuffings(params.getall('stuffing'))
+    sauces = Sauces(ingredients_parser.parse_sauces(params.getall('sauce')))
+    stuffings = Stuffings(ingredients_parser.parse_stuffings(params.getall('stuffing')))
     return Burger(bun, cutlet, sauces, stuffings)
 
 
