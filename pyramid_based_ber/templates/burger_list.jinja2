@@ -1,0 +1,23 @@
+{% extends "index.jinja2" %}
+
+{% block content %}
+    <h1>Заказ на кухню</h1>
+    <table border="1">
+    <tr>
+      <td>Номер</td>
+      <td>Булка</td>
+      <td>Мясо</td>
+      <td>Соус</td>
+      <td>Начинка</td>
+      </tr>
+        {% for burger in burgers %}
+        <tr>
+          <td>{{ burger.id }}</td>
+          <td>{{ burger.bun }}</td>
+          <td>{{ burger.cutlet }}</td>
+          <td>{{ burger.sauces }}</td>
+          <td>{{ burger.stuffings }}</td>
+      </tr>
+        {% endfor %}
+    </table>
+{% endblock content %}

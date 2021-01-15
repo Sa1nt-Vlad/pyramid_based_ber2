@@ -14,3 +14,4 @@ class OrderDto(object):
         self.phone_number = phone_number
         self.address = address
         self.burger_config = burger_config
+        self.done = 0

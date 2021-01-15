@@ -17,7 +17,8 @@ def register_order(request, order_info):
         phone=order_info.phone_number,
         address=order_info.address,
         burger=id,
-        time=order_info.creation_date
+        time=order_info.creation_date,
+        done=order_info.done
     )
     request.dbsession.add(order)
     transaction.commit()
