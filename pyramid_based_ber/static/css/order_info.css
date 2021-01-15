@@ -42,6 +42,7 @@
 .order-info table td:first-child {
 	width: 40%;
 	padding-left: 5px;
+	vertical-align: top;
 }
 
 @media screen and (max-width: 1650px) {
@@ -51,7 +52,8 @@
 	.order-info .top h1 {
 		font-size: 30px;
 	}
-	.order-info table {
+	.order-info table,
+	.order-info .bottom h3 {
 		width: 48%;
 	}
 }
@@ -63,7 +65,8 @@
 	.order-info .top h1 {
 		font-size: 28px;
 	}
-	.order-info table {
+	.order-info table,
+	.order-info .bottom h3 {
 		width: 55%;
 	}
 }
@@ -75,7 +78,8 @@
 	.order-info .top h1 {
 		font-size: 26px;
 	}	
-	.order-info table {
+	.order-info table,
+	.order-info .bottom h3 {
 		width: 60%;
 	}
 }
