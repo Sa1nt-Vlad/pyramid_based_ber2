@@ -23,3 +23,25 @@ test
 
 # Project exclude paths
 /venv/
+.tox/
+nosetests.xml
+coverage.xml
+nosetests-*.xml
+coverage-*.xml
+tutorial.db
+build/
+dist/
+bin/
+lib/
+include/
+distribute-*.tar.gz
+bookenv/
+jyenv/
+pypyenv/
+env*/
+venv/
+.cache/
+.python-version
+.idea
+*.iml
+*.xml
