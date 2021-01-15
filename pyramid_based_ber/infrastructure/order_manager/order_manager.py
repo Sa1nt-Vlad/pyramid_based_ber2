@@ -23,6 +23,6 @@ def register_order(request, order_info):
     request.dbsession.add(order)
     transaction.commit()
 
-    request.dbsession.query(OrderDB)
+    query = request.dbsession.query(OrderDB)
     order_id = query.order_by(OrderDB.id.desc()).first().id
     return order_id

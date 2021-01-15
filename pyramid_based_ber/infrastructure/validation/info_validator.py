@@ -23,7 +23,7 @@ def validate(order_info: OrderDto) -> bool:
 
 
 def correct_name(name: str) -> bool:
-    return name is not None and re.match(r'[a-zA-Z]{3,10}', name) is not None
+    return name is not None and re.match(r'[a-zA-Zа-яА-Я]{3,10}', name) is not None
 
 
 def correct_number(number: str) -> bool:
