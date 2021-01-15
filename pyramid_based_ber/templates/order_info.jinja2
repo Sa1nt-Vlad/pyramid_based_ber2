@@ -1,17 +1,57 @@
 {% extends "index.jinja2" %}
 
+{% block css %}<link rel="stylesheet" type="text/css" href="../static/css/order_info.css">{% endblock css %}
+
 {% block content %}
-    <h1>Информация о заказе</h1>
-    <p>Номер заказа: {{ order_info.order_id }}</p>
-    <p>Дата совершения заказа: {{ order_info.creation_date }}</p>
-    <p>Ваше имя: {{order_info.name}}</p>
-    <p>Ваш номер: {{order_info.phone_number}}</p>
-    <p>Ваш адрес: {{order_info.address}}</p>
-    <br>
-    <h2>Собранный бургер:</h2>
-    <p>Булочка: {{order_info.burger_config.bun}}</p>
-    <p>Котлета: {{order_info.burger_config.cutlet}}</p>
-    <p>Начинка: {{order_info.burger_config.stuffings}}</p>
-    <p>Соусы: {{order_info.burger_config.sauces}}</p>
-    <br>
+    <div class="order-info">
+        <div class="top">
+            <h1>Заказ успешно сформирован</h1>
+            <img src="../static/img/checkmark.png" width="25px" height="25px">
+        </div>
+        <div class="bottom">
+        <h3>Информация о заказе</h3>
+        <table>
+            <tr>
+                <td align="left">Номер заказа:</td>
+                <td align="left">{{order_info.order_id}}</td>
+            </tr>
+            <tr>
+                <td align="left">Дата заказа:</td>
+                <td align="left">{{order_info.creation_date}}</td>
+            </tr>
+            <tr>
+                <td align="left">Ваше имя:</td>
+                <td align="left">{{order_info.name}}</td>
+            </tr>
+            <tr>
+                <td align="left">Ваш номер:</td>
+                <td align="left">{{order_info.phone_number}}</td>
+            </tr>
+            <tr>
+                <td align="left">Ваш адрес:</td>
+                <td align="left">{{order_info.address}}</td>
+            </tr>
+        </table>
+        <br>
+        <h3>Собранный бургер:</h3>
+        <table width="500px">
+            <tr>
+                <td align="left">Булочка:</td>
+                <td align="left">{{order_info.burger_config.bun}}</td>
+            </tr>
+            <tr>
+                <td align="left">Котлета:</td>
+                <td align="left">{{order_info.burger_config.cutlet}}</td>
+            </tr>
+            <tr>
+                <td align="left">Начинка:</td>
+                <td align="left">{{order_info.burger_config.stuffings}}</td>
+            </tr>
+            <tr>
+                <td align="left">Соусы:</td>
+                <td align="left">{{order_info.burger_config.sauces}}</td>
+            </tr>
+        </table>
+    </div>
+    </div>
 {% endblock content %}
