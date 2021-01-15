@@ -4,10 +4,10 @@ from pyramid_based_ber.models import BurgerDB, OrderDB
 
 def register_order(request, order_info):
     burger = BurgerDB(
-        bun=repr(order_info.burger_config.bun),
-        cutlet=repr(order_info.burger_config.cutlet),
-        sauces=repr(order_info.burger_config.sauces.sauces),
-        stuffings=repr(order_info.burger_config.stuffings.stuffings))
+        bun=str(order_info.burger_config.bun),
+        cutlet=str(order_info.burger_config.cutlet),
+        sauces=str(order_info.burger_config.sauces),
+        stuffings=str(order_info.burger_config.stuffings))
     request.dbsession.add(burger)
     transaction.commit()
     query = request.dbsession.query(BurgerDB)
