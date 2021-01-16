@@ -14,6 +14,7 @@ body {
 
 header {
 	min-height: 52px;
+	border-bottom: 1px solid black;
 }
 
 header .wrapper {

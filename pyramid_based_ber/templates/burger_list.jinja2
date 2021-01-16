@@ -3,6 +3,11 @@
 {% block css %}<link rel="stylesheet" type="text/css" href="../static/css/table.css">{% endblock css %}
 
 {% block content %}
+<div class="burger-list">
+    <div class="return">
+      
+      <a href="/list"><img src="../static/img/backarrow.png" width="7px"> К списку заказов</a>
+    </div>
     <h1>Заказ на кухню</h1>
     <table border="1">
     <tr>
@@ -22,5 +27,5 @@
       </tr>
         {% endfor %}
     </table>
-    <a href="/list">К списку заказов</a>
+</div>
 {% endblock content %}
