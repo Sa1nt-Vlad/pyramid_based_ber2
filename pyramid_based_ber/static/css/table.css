@@ -2,7 +2,17 @@ table {
   font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
   border-collapse: collapse;
   color: #686461;
+  margin: 0 auto 50px auto;
+  width: 50%;
 }
+
+h1 {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+/*
 caption {
   padding: 10px;
   color: white;
@@ -10,7 +20,7 @@ caption {
   font-size: 18px;
   text-align: left;
   font-weight: bold;
-}
+} */
 th {
   border-bottom: 3px solid #B9B29F;
   padding: 10px;

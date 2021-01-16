@@ -5,33 +5,33 @@
 {% block content %}
     <h1>Данные для доставки</h1>
     <table border="1">
-    <tr>
-      <td>Номер</td>
-      <td>Дата</td>
-      <td>Имя</td>
-      <td>Телефон</td>
-      <td>Адрес</td>
-      <td>Номер бургера</td>
-      <td>Статус</td>
+      <tr>
+        <td>Номер</td>
+        <td>Дата</td>
+        <td>Имя</td>
+        <td>Телефон</td>
+        <td>Адрес</td>
+        <td>Номер бургера</td>
+        <td>Статус</td>
       </tr>
-        {% for order_info in order_infos %}
-        <tr>
-          <td>{{ order_info.id }}</td>
-          <td>{{ order_info.time }}</td>
-          <td>{{ order_info.name }}</td>
-          <td>{{ order_info.phone }}</td>
-          <td>{{ order_info.address }}</td>
-          <td><a href="/burgers"> {{ order_info.burger }} </a></td>
-          {% if order_info.done == 0 %}
-          <td>
-              <form action="done" method="UPDATE">
-               <div hidden="true"><input type="number" name="id" value="{{ order_info.id }}"></div>
-                <input type="submit" value="Завершить">
-              </form>
-          </td>
-          {% else %}
-          <td bgcolor="#8fbc8f"> Выполнен </td>
-          {% endif %}
+      {% for order_info in order_infos %}
+      <tr>
+        <td>{{ order_info.id }}</td>
+        <td>{{ order_info.time }}</td>
+        <td>{{ order_info.name }}</td>
+        <td>{{ order_info.phone }}</td>
+        <td>{{ order_info.address }}</td>
+        <td><a href="/burgers"> {{ order_info.burger }} </a></td>
+        {% if order_info.done == 0 %}
+        <td>
+          <form action="done" method="UPDATE">
+            <div hidden="true"><input type="number" name="id" value="{{ order_info.id }}"></div>
+            <input type="submit" value="Завершить">
+          </form>
+        </td>
+        {% else %}
+        <td bgcolor="#8fbc8f">Выполнен</td>
+        {% endif %}
       </tr>
         {% endfor %}
     </table>
