@@ -1,12 +1,12 @@
 .banner {
-	min-height: 874px;
+	height: 874px;
 	margin-bottom: 4%;
+	background: url("../img/burgers.jpg") center no-repeat;
+	background-size: cover;
 }
 
 .banner .wrapper {
 	min-height: 874px;
-	background: url("../img/burgers.jpg") center no-repeat;
-	background-size: cover;
 	padding-top: 415px;
 	text-align: center;
 }
@@ -124,7 +124,7 @@
 	background-color: #42a053;
 	border: 1px solid black;
 	color: white;
-	margin-bottom: 350px;
+	margin-bottom: 250px;
 	transition: background-color 0.3s ease;
 }
 
@@ -179,5 +179,31 @@
 	}
 	.content .steps h2 {
 		font-size: 26px;
+	}
+}
+
+@media screen and (max-height: 900px) {
+	.banner .wrapper {
+		padding-top: 350px;
+	}
+	.banner .wrapper h1 {
+		font-size: 40px;
+		margin-bottom: 35px;
+	}
+	.banner .wrapper a {
+		width: 180px;
+		height: 45px;
+		border: 1px solid #0a1b21;
+		opacity: 0.8;
+		background-color: #033b4d;
+		color: white;
+		letter-spacing: 1px;
+		font-size: 17px;
+		padding-top: 10px;
+		border-radius: 15px;
+		transition: background-color 0.3s ease;
+	}
+	.content .delivery-info input[type="submit"] {
+		margin-bottom: 150px;
 	}
 }

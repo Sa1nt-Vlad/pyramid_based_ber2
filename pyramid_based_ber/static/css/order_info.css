@@ -11,9 +11,13 @@
 	margin-bottom: 40px;
 }
 
-.order-info .top img {
+.order-info .top .mark {
 	align-self: center;
 	margin-left: 10px;
+}
+
+.order-info .top .cancelmark {
+	margin-top: 7px;
 }
 
 .order-info .top h1 {
@@ -58,16 +62,19 @@
 	}
 }
 
-@media screen and (max-width: 1350px) {
+@media screen and (max-width: 1500px) {
 	.order-info .bottom {
-		font-size: 17px;
+		font-size: 16px;
 	}
 	.order-info .top h1 {
-		font-size: 28px;
+		font-size: 26px;
 	}
 	.order-info table,
 	.order-info .bottom h3 {
-		width: 55%;
+		width: 58%;
+	}
+	.order-info .top .cancelmark {
+		margin-top: 4px;
 	}
 }
 

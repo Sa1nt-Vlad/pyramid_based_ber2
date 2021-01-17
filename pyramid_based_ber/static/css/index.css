@@ -10,17 +10,19 @@ body {
 	width: 100%;
 	display: flex;
 	flex-direction: column;
+	position: relative;
 }
 
 header {
-	min-height: 52px;
+	height: 52px;
 	border-bottom: 1px solid black;
+	background: url("../img/black_line.jpg") center no-repeat;
+	background-size: cover;
 }
 
 header .wrapper {
 	min-height: 52px;
 	padding-left: 113px;
-	background: url("../img/black_line.jpg") center no-repeat;
 }
 
 header .wrapper ul {
@@ -120,7 +122,7 @@ footer .copyright {
 	}
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1280px) {
 	header .wrapper li:first-child {
 		margin-right: 41%;
 	}
@@ -155,5 +157,38 @@ footer .copyright {
 		height: 5.509%;
 		padding-left: 50px;
 		background: url("../img/black_line.jpg") center no-repeat;
+	}
+}
+
+@media screen and (max-height: 900px) {
+	footer {
+		width: 100%;
+		height: 100px;
+		padding: 15px 100px 50px 100px;
+	}
+
+	footer .social-media p {
+		font-size: 18px;
+	}
+
+	footer .icon {
+		width: 30px;
+		height: 30px;
+	}
+
+	footer .ws {
+		background-position: -33px 0px;
+	}
+
+	footer .gl {
+		background-position: -64px 0px;
+	}
+
+	footer .is {
+		background-position: -95px 0px;
+	}
+
+	footer .copyright {
+		font-size: 15px;
 	}
 }

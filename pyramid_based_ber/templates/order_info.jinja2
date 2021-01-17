@@ -5,8 +5,13 @@
 {% block content %}
     <div class="order-info">
         <div class="top">
+            {% if not order_info.order_id == "Заказ не оформлен!" %}
             <h1>Заказ успешно сформирован</h1>
-            <img src="../static/img/checkmark.png" width="25px" height="25px">
+            <img class="mark checkmark" src="../static/img/checkmark.png" width="25px" height="25px">
+            {% else %}
+            <h1 style="color: red;">Заказ не сформирован</h1>
+            <img class="mark cancelmark" src="../static/img/cancelmark.png" width="25px" height="25px">
+            {% endif %}         
         </div>
         <div class="bottom">
         <h3>Информация о заказе</h3>

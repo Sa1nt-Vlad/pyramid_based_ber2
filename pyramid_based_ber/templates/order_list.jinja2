@@ -22,7 +22,7 @@
         <td>{{ order_info.name }}</td>
         <td>{{ order_info.phone }}</td>
         <td>{{ order_info.address }}</td>
-        <td><a href="/burgers"> {{ order_info.burger }} </a></td>
+        <td><a href="/burgers" target="_blank"> {{ order_info.burger }} </a></td>
         {% if order_info.done == 0 %}
         <td>
           <form action="done" method="UPDATE">
