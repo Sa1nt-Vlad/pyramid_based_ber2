@@ -4,34 +4,59 @@
 
 {% block content %}
 <div class="order-list">
+    <div class="return">
+      <a href="/burgers"><img src="../static/img/backarrow.png" width="7px"> К списку бургеров </a>
+    </div>
+    {% if access != True %}
+    <form action="access" method="UPDATE">
+        <div><input type="number" name="pw"></div>
+        <input type="submit" value="Запросить доступ">
+    </form>
+    {% endif %}
     <h1>Данные для доставки</h1>
     <table border="1">
       <tr>
         <td>Номер</td>
         <td>Дата</td>
         <td>Имя</td>
-        <td>Телефон</td>
-        <td>Адрес</td>
         <td>Номер бургера</td>
-        <td>Статус</td>
+        {% if access %}
+            <td>Телефон</td>
+            <td>Адрес</td>
+            <td>Статус</td>
+        {% endif %}
       </tr>
       {% for order_info in order_infos %}
       <tr>
         <td>{{ order_info.id }}</td>
         <td>{{ order_info.time }}</td>
         <td>{{ order_info.name }}</td>
+<<<<<<< HEAD
         <td>{{ order_info.phone }}</td>
         <td>{{ order_info.address }}</td>
         <td><a href="/burgers" target="_blank"> {{ order_info.burger }} </a></td>
         {% if order_info.done == 0 %}
+=======
+>>>>>>> 2e5cbb46186b8fa2ff020e84bf9dfcab6a36868f
         <td>
-          <form action="done" method="UPDATE">
-            <div hidden="true"><input type="number" name="id" value="{{ order_info.id }}"></div>
-            <input type="submit" value="Завершить">
-          </form>
+            <form action="getBurger" method="GET">
+              <div hidden="true"><input type="number" name="bid" value="{{ order_info.burger }}"></div>
+              <input type="submit" value="{{ order_info.burger }}">
+            </form>
         </td>
-        {% else %}
-        <td bgcolor="#8fbc8f">Выполнен</td>
+        {% if access %}
+            <td>{{ order_info.phone }}</td>
+            <td>{{ order_info.address }}</td>
+            {% if order_info.done == 0 %}
+            <td>
+            <form action="done" method="UPDATE">
+              <div hidden="true"><input type="number" name="id" value="{{ order_info.id }}"></div>
+              <input type="submit" value="Завершить">
+            </form>
+            </td>
+            {% else %}
+            <td bgcolor="#8fbc8f">Выполнен</td>
+            {% endif %}
         {% endif %}
       </tr>
         {% endfor %}
