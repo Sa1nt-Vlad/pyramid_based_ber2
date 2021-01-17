@@ -1,5 +1,5 @@
 import transaction
-from pyramid_based_ber.models import BurgerDB, OrderDB
+from pyramid_based_ber.models import BurgerDB, OrderDB, PW
 
 
 def register_order(request, order_info):

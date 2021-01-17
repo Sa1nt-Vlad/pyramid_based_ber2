@@ -7,7 +7,8 @@ import zope.sqlalchemy
 # Base.metadata prior to any initialization routines
 from .mymodel import MyModel
 from .order_db import OrderDB
-from .burger_db import BurgerDB  # flake8: noqa
+from .burger_db import BurgerDB
+from .pw import PW # flake8: noqa
 
 # run configure_mappers after defining all of the classes to ensure
 # all relationships can be setup
