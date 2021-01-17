@@ -4,6 +4,9 @@
 
 {% block content %}
 <div class="order-list">
+    <div class="return">
+      <a href="/burgers"><img src="../static/img/backarrow.png" width="7px"> К списку бургеров </a>
+    </div>
     {% if access != True %}
     <form action="access" method="UPDATE">
         <div><input type="number" name="pw"></div>
@@ -28,7 +31,12 @@
         <td>{{ order_info.id }}</td>
         <td>{{ order_info.time }}</td>
         <td>{{ order_info.name }}</td>
-        <td><a href="/burgers"> {{ order_info.burger }} </a></td>
+        <td>
+            <form action="getBurger" method="GET">
+              <div hidden="true"><input type="number" name="bid" value="{{ order_info.burger }}"></div>
+              <input type="submit" value="{{ order_info.burger }}">
+            </form>
+        </td>
         {% if access %}
             <td>{{ order_info.phone }}</td>
             <td>{{ order_info.address }}</td>

@@ -6,3 +6,4 @@ def includeme(config):
     config.add_route('burgers', '/burgers')
     config.add_route('done', '/done')
     config.add_route('access', '/access')
+    config.add_route('getBurger', '/getBurger')
