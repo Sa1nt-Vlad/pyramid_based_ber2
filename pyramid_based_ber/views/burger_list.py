@@ -12,3 +12,10 @@ def make_order(request):
     return {'burgers': burgers}
     # else:
     # return {'': 'Incorrect data'}
+
+
+@view_config(route_name='getBurger', renderer='../templates/burger_list.jinja2')
+def make_order(request):
+    from .. import models
+    burger = request.dbsession.query(models.BurgerDB).filter_by(id=request.params["bid"]).all()
+    return {'burgers': burger}
