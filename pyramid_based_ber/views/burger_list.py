@@ -15,7 +15,7 @@ def make_order(request):
 
 
 @view_config(route_name='getBurger', renderer='../templates/burger_list.jinja2')
-def make_order(request):
+def get_burger(request):
     from .. import models
     burger = request.dbsession.query(models.BurgerDB).filter_by(id=request.params["bid"]).all()
     return {'burgers': burger}

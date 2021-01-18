@@ -31,13 +31,10 @@
         <td>{{ order_info.id }}</td>
         <td>{{ order_info.time }}</td>
         <td>{{ order_info.name }}</td>
-<<<<<<< HEAD
         <td>{{ order_info.phone }}</td>
         <td>{{ order_info.address }}</td>
         <td><a href="/burgers" target="_blank"> {{ order_info.burger }} </a></td>
         {% if order_info.done == 0 %}
-=======
->>>>>>> 2e5cbb46186b8fa2ff020e84bf9dfcab6a36868f
         <td>
             <form action="getBurger" method="GET">
               <div hidden="true"><input type="number" name="bid" value="{{ order_info.burger }}"></div>
